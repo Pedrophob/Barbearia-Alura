@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang = 'pt-br'>
+    <head>
+       <meta charset ='UTF-8'>
+       <meta name="viewport" content="width=device-width">
+       <title>Contatos - Barbearia Alura</title>
+       <link href="reset.css" rel="stylesheet">
+       <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+       <style>
+                body{
+                    font-family: 'Montserrat', sans-serif;
+                }
+                header
+                {
+                    background-color: #BBBBBB;
+                    padding: 30px;
+                }
+                .caixa{
+                    position:relative;
+                    width: 940px;
+                    margin: 0 auto;
+                }
+                nav{
+                    position: absolute;
+                    top: 110px;
+                    right: 0;
+                }
+                nav li {
+                    display: inline;
+                    margin: 0 0 0 15px;
+                }
+                nav a{
+                    text-transform: uppercase;    
+                    color: #000000;
+                    font-weight: bold;
+                    font-size: 22px;
+                    text-decoration: none;
+                }
+                nav a:hover{
+                    color: #FEFEFE;
+                    text-decoration: underline;
+                }
+                form{
+                    margin-left: 2px;
+                }
+                main{
+                    width: 940px;
+                    margin: 40px auto;
+                } 
+                form label, form legend{
+                    display: block;
+                    font-size: 20px;
+                    text-decoration: bold;
+                    margin: 0 0 10px;
+                }
+                .input-padrão{
+                    display: block;
+                    margin: 0 0 10px;
+                    padding: 10px 20px;
+                    width: 50%;
+                }
+                .checkbox{
+                    margin: 20px 0;
+                }
+                .enviar{
+                    background: url(bg.jpg);
+                    width: 55%;
+                    padding: 25px 0;
+                    font-weight: bold;
+                    font-size: 18px;
+                    color: #FFFAFA;
+                    border-style: none;   /*tira o estilo da borda*/
+                    border-radius: 10px;   
+                    
+                }
+                .enviar:hover{
+                    color: #4169E1;
+                    transition: 0.7s;    /*esse comando e para qualquer tipo de transiçao (mudança de cor ou tamnho) para calcularmos o tempo dessa transiçao em segundos(s) ou em (ms)) */
+                    cursor: pointer;    /*esse comando e pra quando passar o mouse em algo que poderia ser clicado colocamos para aparecer a mao no cursor do mouse*/
+                    transform:scale(1.1);/*Quando usamos esse comando tranformamos o tamanho do objeto*/
+                    background: white;
+                   /* transform:rotate(70deg); esse comando enclina o objeto dependendo do grau*/
+                }
+                .horario{
+                    text-transform: uppercase;
+                    padding-top:70px;
+                    padding-left: 100px;
+                    padding-bottom:5px;
+                    font-weight: bold;
+                    font-size:20px;
+                }
+                table{
+                    background:url(bg.jpg);
+                    color: #ffffff;
+                    width: 55%;
+                    border-radius: 10px;
+                    padding: 5px 5px;
+                    margin:10px;
+                }
+                thead{
+                    color: #4169E1;
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+                tbody{
+                    text-align: center;
+                    font-size: 18px;
+                }
+                td {
+                    border: 5px solid #4169E1;
+                    border-radius: 10px;
+                }
+                footer{
+                    text-align: center;
+                    background: url(bg.jpg); /*pode ser utilizado caso vc tenha um fundo com um cor ou paisagem*/
+                    padding: 40px 0 ;
+                }
+                .copyright{
+                    font-size: 13px;
+                    color: #FFFAFA;
+                }
+                @media screen and (max-width: 480px) {
+	                .caixa,.import{
+		                width: auto;
+	                }
+                    h1{
+                        text-align:center;
+                    }
+                    nav{
+                        position:static;
+                    }
+                    .enviar,table{
+                        width:100%;
+                        margin:0;
+                        text-align:center;
+                    }               
+                    .input-padrão{
+                       width:89%;
+                    }
+                }   
+       </style>
+    </head>
+    <Body>
+        <header><!--para criarmos um cabeçalho-->
+            <div class = 'caixa'>
+                <h1><img src = 'logo.png' alt="Logo Barbearia Alura"></h1>
+                <nav><!--tag para criarmos assuntos relacionados a navegação ex:acesso de links-->
+                    <ul>
+                        <li><a href = 'home.html'>Home</a></li>
+                        <li><a href = 'produtos.html'>Produtos</a></li>
+                        <li><a href = 'contatos.html'>Contatos</a></li>
+                    </ul>
+                </nav><!--tag para criarmos assuntos relacionados a navegação ex:acesso de links-->
+            </div>
+        </header><!--para criarmos um cabeçalho-->
+        <main class="import"><!--parte mais inpotante do html-->
+            <form class="formulario"><!--para criarmos um formulario-->
+                <label for= "Nome e Sobrenome">Nome e sobrenome</label>
+                <input type= "text" id= "Nome e Sobrenome" class="input-padrão" required>
+
+                <!--Aqui temos diversos tipos de input como: text,email,tel-->
+                <!--Alem disso temos o required que basicamente quando e dado esse comando deixando o preenchimento dele obrigatorio ele avira caso o usario nao tenha preenchido-->
+
+                <label for= "email">E-mail</label>
+                <input type= "email" id= "email"  class="input-padrão" required placeholder="seuemail@gmail.com">
+
+                <!--Aqui temos o placeholder que é uma ajuda ao usuario quando usado o comando ele escreve oq e pedido no input porem quando o usuario for escrever ele ira desaparecer so para dar um ex ao usuario-->
+
+                <label for= "tel">Telefone</label>
+                <input  type= "tel" id= "tel"  class="input-padrão" required placeholder="(XX) XXXXX-XXXX">    
+
+                <label for="mensagem">Mensagem</label>                
+                <textarea cols="70" rows="10" id="mensagem"  class="input-padrão"></textarea>
+
+                <!--O text area e basicamente um input com uma tela para o usario escrever uma mensagem pode ser configurado aqui ou no css-->
+                
+                <fildeset><!--É uma especie de div-->
+                    <legend>Como você prefere nosso contato?</legend><!--quando usado o fildeset o legend e usado como um <p>-->
+                    <label for="radio-email"><input type="radio" name="contato" value="Email" id="radio-email">E-mail</label>
+
+                    <!--Aqui temos um input onde sao dados algumas sugestoes e podem ser marcadas por bolinha-->
+
+                    <label for="radio-telefone"> <input type="radio" name="contato" value="Telefone" id="radio-telefone">Telefone</label>
+                    
+                    <label class='envio'for="radio-whatsapp"><input type="radio" name="contato" value="Whatsapp" id="radio-whatsapp" checked>Whatsapp</label>
+                </fildeset>
+                
+                <fildeset class="opition">
+                <legend>Qual horario você prefere receber nossas novidades?</legend>
+                    <select><!--ele abri uma caixinha onde pode ser selecionada as option-->
+                        <option>Manhã</option><!--as options sao sugestoes baseado na pergunta-->
+                        <option>Tarde</option>
+                        <option>Noite</option>
+                    </select>
+                </fildeset>
+        
+                <label class="checkbox"><input type="checkbox" checked>Gostoria de receber nossas novidade por email?</label><!--aqui temos um input onde pode ser selecionada um bloquinho se vc quiser caso contrario nao baseado na pergunta-->
+
+                <input type= "submit" value= "Enviar formulário"  class="enviar"><!--Aqui temos um botão de enviar -->
+
+                
+            </form><!--para criarmos um formulario-->
+
+            <h2 class="horario"> Horarios de funcionamento </h2>
+
+            <table> <!--tag pra formarmos uma tabela-->
+                <thead><!--tag para formarmos o cabeçalho da tabela-->
+                    <tr><!--tag para fazer linhas tabela-->
+                        <th>Dia</th><!--criar celular do cabeçalho dentro da tabela / informações do cabeçalho na tabela-->
+                        <th>Horario</th>
+                    </tr>
+                </thead>
+                <tbody><!--tag para formarmos corpo/body da tabela-->
+                    <tr>
+                        <td>Segunda/Terça</td><!--para criarmos uma celula da tabela-->
+                        <td>8:00 ~ 18:00</td>
+                    </tr>
+                    <tr>
+                        <td>Quarta/Quinta</td>
+                        <td>9:00 ~ 19:00</td>
+                    </tr>
+                    <tr>
+                        <td>Sexta/Sabádo</td>
+                        <td>9:00 ~ 20:00</td>
+                    </tr>
+                    <tfoot>
+                        <!--para criarmos o roda pé/footer da tabela -->
+                    </tfoot>
+                </tbody>
+                <!--<tr>
+                    <td colspan="5">Rio de Janeiro</td> 
+                </tr>
+                Quando quisermos adicionar uma celula em uma tabela varias vezes e so colorcarmos assim-->
+               
+            </table><!--tag pra formarmos uma tabela-->
+        </main><!--parte mais inpotante do html-->
+        <footer><!--para criarmos o rada pé-->
+            <img src="logo-branco.png" alt="Logo Barbearia Alura">
+            <p class="copyright">&copy; Copyright Barbearia Alura - 2019</p> 
+        </footer><!--para criarmos o rada pé-->
+    </Body>
+</html>
